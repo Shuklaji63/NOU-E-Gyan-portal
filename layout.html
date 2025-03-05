@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to :: {% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- google fonts -->
+</head>
+<body style="font-family:Poppins, sans-serif;">
+    <!-- this is container -->
+    <div class="container-fluid">
+        <!-- this is headline -->
+        <div class="row p-2" style="background-color: darkred; color: white;">
+             <div class="col-md-6 text-center">
+                <span>
+                    <i class="fa-solid fa-phone fa-bounce" style="color: #ffffff;"></i>+91 7080102007
+                </span>&nbsp;&nbsp;&nbsp;
+                <span>
+                    <i class="fa-solid fa-envelope fa-bounce" style="color: #ffffff;"></i>nouegyanhelp@gmail.com
+                </span>
+             </div>
+             <div class="col-md-6 text-center">
+                <span id="i1"></span>
+             </div>
+        </div>
+        <!-- this is headline -->
+        <!-- this is headline2 -->
+         <div class="row p-3" style="background-color: darkred; color: white; border: 1px dashed gold;">
+            <div class="col-md-12 text-center">
+                <span>For Admission and Examination related query, Kindly call on University helpline Numbers 9341508580,9341508577,0612-2201013 & 0612-2206916</span>
+            </div>
+         </div>
+        <!-- this is headline2 -->
+        <!-- this is header -->
+         <div class="row mt-1">
+            <div class="col-md-2 text-end">
+                <img src="{% static 'img/logo1.png' %}" class="w-50">
+            </div>
+            <div class="col-md-3 mt-3">
+                <h3 style="color: darkred;" class="fw-bold">NOU e-GYAN PORTAL</h3>
+                <p class="fw-bold">(A Concept by Nalanda Open University)</p>
+            </div>
+            <div class="col-md-3"></div>
+            <div class="col-md-4 my-auto">
+                <span style="border: 1px solid #376cc8; padding-left: 10px; padding-top: 10px; padding-right: 10px; padding-bottom: 7px; border-radius: 100%;"><i class="fa-brands fa-facebook" style="color: #376cc8; font-size: 20px;"></i></span>
+                <span style="border: 1px solid #ba34d5; padding-left: 10px; padding-top: 10px; padding-right: 10px; padding-bottom: 7px; border-radius: 100%;"><i class="fa-brands fa-instagram" style="color: #ba34d5; font-size: 20px;"></i></span>
+                <span style="border: 1px solid #74C0FC; padding-left: 8px; padding-top: 10px; padding-right: 8px; padding-bottom: 6px; border-radius: 100%;"><i class="fa-brands fa-twitter" style="color: #74C0FC; font-size: 20px;"></i></span>
+                <span style="border: 1px solid #2465d6; padding-left: 10px; padding-top: 10px; padding-right: 10px; padding-bottom: 7px; border-radius: 100%;"><i class="fa-brands fa-linkedin" style="color: #2465d6; font-size: 20px;"></i></span>
+                <span style="border: 1px solid #e60f0f; padding-left: 9px; padding-top: 10px; padding-right: 9px; padding-bottom: 7px; border-radius: 100%;"><i class="fa-brands fa-youtube" style="color: #e60f0f; font-size: 20px;"></i></span>
+            </div>
+         </div>
+        <!-- this is header -->
+        <!-- navbar starts -->
+        <div class="row">
+            <div class="col-md-12 p-0">
+                <nav class="navbar navbar-expand-lg mt-2 p-3" style="background-color: grey; color: white;" data-bs-theme="dark">
+                    <div class="container-fluid">
+                    <div class="col-md-5 text-center">
+                     <h3 class="mx-5">WELCOME <span style="color: gold;">STUDENTS</span></h3>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-6">
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav text-center">
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Home
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="{% url 'about' %}">About</a></li>
+                              <li><a class="dropdown-item" href="{% url 'home' %}">Home</a></li>
+                            </ul>
+                          </li>  
+                          <li class="nav-item">
+                            <a class="nav-link" href="{% url 'Regi' %}">Registration</a>
+                          </li> 
+                          <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-book-open" style="color: #ffffff;"></i>Courses</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-strikethrough" style="color: #ffffff;"></i>Services</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-graduation-cap" style="color: #ffffff;"></i>Study Center</a>
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              <i class="fa-solid fa-key fa-spin" style="color: #ffffff;"></i>
+                              Login
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="{% url 'homelogin' %}">Student Login</a></li>
+                              <li><a class="dropdown-item" href="{% url 'adminlogin' %}">Admin Login</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item" href="#">University Login</a></li>
+                            </ul>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="{% url 'contact' %}"><i class="fa-solid fa-phone fa-spin" style="color: #ffffff;"></i>Contact</a>
+                          </li>
+                        </ul>
+                      </div>
+                     </div>
+                    </div>
+                  </nav>
+            </div>
+        </div>
+        <!-- navbar ends -->
+        
+        {% block main %}
+
+        {% endblock %}
+
+         <!-- Footer starts -->
+    <div class="row"> 
+      <div class="col-md-12 p-0">
+          <footer class="text-center text-lg-start text-white" style="background-color: darkred;">
+              <!-- Grid container -->
+              <div class="container p-4">
+                <!--Grid row-->
+                <div class="row my-4">
+                  <!--Grid column-->
+                  <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          
+                    <div class="rounded-circle bg-white shadow-1-strong d-flex align-items-center justify-content-center mb-4 mx-auto" style="width: 150px; height: 150px;">
+                      <img src="{% static 'img/logo1.png' %}" height="130" alt=""
+                           loading="lazy" />
+                    </div>
+          
+                    <p class="text-center">Nalanda Open University is a State Open University duly established under the Act of Bihar Government and is also recognized by Distance Education Council, IGNOU, Maidan Garhi, New Delhi.</p>
+          
+                    <span class="mx-2" style="background-color: #fbb400; padding-left: 10px; padding-top: 10px; padding-right: 10px; padding-bottom: 7px; border-radius: 100%;"><i class="fa-brands fa-facebook" style="color: white; font-size: 20px;"></i></span>
+                    <span class="mx-2" style="background-color: #fbb400; padding-left: 10px; padding-top: 10px; padding-right: 10px; padding-bottom: 7px; border-radius: 100%;"><i class="fa-brands fa-instagram" style="color: white; font-size: 20px;"></i></span>
+                    <span class="mx-2" style="background-color: #fbb400; padding-left: 8px; padding-top: 10px; padding-right: 8px; padding-bottom: 6px; border-radius: 100%;"><i class="fa-brands fa-twitter" style="color: white; font-size: 20px;"></i></span>
+                    <span class="mx-2" style="background-color: #fbb400; padding-left: 10px; padding-top: 10px; padding-right: 10px; padding-bottom: 7px; border-radius: 100%;"><i class="fa-brands fa-linkedin" style="color: white; font-size: 20px;"></i></span>
+                    <span class="mx-2" style="background-color: #fbb400; padding-left: 9px; padding-top: 10px; padding-right: 9px; padding-bottom: 7px; border-radius: 100%;"><i class="fa-brands fa-youtube" style="color: white; font-size: 20px;"></i></span>
+          
+                  </div>
+                  <!--Grid column-->
+          
+                  <!--Grid column-->
+                  <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h4 class="text-uppercase mb-4">Useful Links</h4>
+          
+                    <ul class="list-unstyled">
+                      <li class="mb-2">
+                        <a href="#!" class="text-white"><i class="fa-brands fa-centos pe-3" style="color: #ffffff;"></i>HOME</a>
+                      </li>
+                      <li class="mb-2">
+                        <a href="#!" class="text-white"><i class="fa-brands fa-centos pe-3" style="color: #ffffff;"></i>ABOUT PORTAL</a>
+                      </li>
+                      <li class="mb-2">
+                        <a href="#!" class="text-white"><i class="fa-brands fa-centos pe-3" style="color: #ffffff;"></i>SERVICES</a>
+                      </li>
+                      <li class="mb-2">
+                        <a href="#!" class="text-white"><i class="fa-brands fa-centos pe-3" style="color: #ffffff;"></i>CONTACT US</a>
+                      </li>
+                      <li class="mb-2">
+                        <a href="#!" class="text-white"><i class="fa-brands fa-centos pe-3" style="color: #ffffff;"></i>COURSES</a>
+                      </li>
+                      <li class="mb-2">
+                        <a href="#!" class="text-white"><i class="fa-brands fa-centos pe-3" style="color: #ffffff;"></i>STUDY CENTERS</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <!--Grid column-->
+          
+                  <!--Grid column-->
+                  <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h4 class="text-uppercase mb-4">CONTACT INFO</h4>
+                    <h5 class="mt-5 fw-bold"><i class="fa-solid fa-location-dot pe-3" style="color: #ffffff;"></i>NOU</h5>
+                    <p class="mt-4" style="color: white;">2nd/3rd Floor, Biscomaun Bhawan, Gandhi Maidan, Patna 800 001 (BIHAR).</p>
+                    <h5 class="mt-5 fw-bold"><i class="fa-solid fa-phone-volume" style="color: #ffffff;"></i>+91 7080102007</h5>
+                    <p class="mt-3">GIVE US A CALL</p>
+                  </div>
+                  <!--Grid column-->
+          
+                  <!--Grid column-->
+                  <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h4 class="text-uppercase mb-4">SUBSCRIBE</h4>
+                    <p class="mt-4">Fill the detail below to receive the manual of the NOU e-Gyan Portal</p>
+                  </div>
+                  <!--Grid column-->
+                </div>
+                <!--Grid row-->
+              </div>
+              <!-- Grid container -->
+          
+              <!-- Copyright -->
+              <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+                © 2024 Copyright:
+                <p>-Ashish shukla-</p>
+              </div>
+              <!-- Copyright -->
+            </footer>
+      </div>
+  </div>
+  <!-- Footer ends -->
+    </div>
+    <!-- this is container -->
+    <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+    <script>
+        document.getElementById('i1').innerHTML=Date();
+    </script>
+</body>
+</html>

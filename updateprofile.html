@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+{% extends 'studentlayout.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block student %}
+    <!-- top block -->
+     <h1 class="text-center mt-5 fw-bold">Update Profile</h1>
+          <div class="row m-4">
+            <div class="col-md-8 mx-auto">
+                <div class="card mb-1 shadow-lg" style="border-radius: 50px; background-image:url(../static/img/logo1.png); background-repeat: no-repeat; background-size: cover;">
+                    <div class="row g-0">
+                       
+                      <div class="col-md-4 text-center">
+                       {% if New_file %}
+                       <img src="{{ uee.New_file.url }}" height="160px" class="rounded-circle" style="border: 6px double gold; margin-top: 13px;">
+                       {% else %}
+                       No photo available
+                       {% endif %}
+
+                       
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title fw-bold" style="color: white; font-size: 19px;">Name:- {{uee.name}}</h5>
+                          <h5 class="card-title fw-bold" style="color: white; font-size: 19px;">Enrollment Number:- 210363</h5>
+                          <div class="row">
+                            <div class="col-md-6">
+                                <h5 style="color: white;">Course:- B-Tech</h5>
+                            </div>
+                            <div class="col-md-6">
+                                <h5 style="color: white;">Branch:- C.S.E</h5>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                                <h5 style="color: white;">Year:- 4</h5>
+                            </div>
+                            <div class="col-md-6">
+                                <h5 style="color: white;">Reg Date:- 09/08/2024</h5>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+          </div>
+    <!-- top block ends -->
+     <div class="row m-2">
+        <div class="col-md-12 text-end">
+            <button class="btn btn-info rounded-pill shadow-lg">Update Profile</button>
+        </div>
+     </div>
+     <div class="row m-4">
+        <div class="col-md-12">
+        <table class="table table-bordered">
+            <tr class="text-center">
+                <th class="table-dark" style="font-size: 15px; color: lightgrey;">Enrollment Number</th>
+                <td class="fw-bold" style="background-color: lightgrey; color: black;">2103450100027</td>
+                
+            </tr>
+            <tr class="text-center">
+                <th class="table-dark" style="font-size: 15px; color: lightgrey;">Name</th>
+                <td class="fw-bold" style="background-color: lightgrey; color: black;">Ashish shukla</td>
+            </tr>
+            <tr class="text-center">
+                <th class="table-dark" style="font-size: 15px; color: lightgrey;">Father's Name</th>
+                <td class="fw-bold" style="background-color: lightgrey; color: black;">Mr. Rajkumar</td>
+                
+            </tr>
+            <tr class="text-center">
+                <th class="table-dark" style="font-size: 15px; color: lightgrey;">Mother's Name</th>
+                <td class="fw-bold" style="background-color: lightgrey; color: black;">Mrs. rajkumari</td>
+            </tr>
+            <tr class="text-center">
+                <th class="table-dark" style="font-size: 15px; color: lightgrey;">Courses</th>
+                <td class="fw-bold" style="background-color: lightgrey; color: black;">B.tech</td>
+            </tr>
+            <tr class="text-center">
+                <th class="table-dark" style="font-size: 15px; color: lightgrey;">Branch</th>
+                <td class="fw-bold" style="background-color: lightgrey; color: black;">C.S.E</td>
+            </tr>
+            <tr class="text-center">
+                <th class="table-dark" style="font-size: 15px; color: lightgrey;">Year</th>
+                <td class="fw-bold" style="background-color: lightgrey; color: black;">4th Year</td>
+            </tr> 
+            <tr class="text-center">
+                <th class="table-dark" style="font-size: 15px; color: lightgrey;">Address</th>
+                <td class="fw-bold" style="background-color: lightgrey; color: black;">Lucknow</td>
+            </tr>
+            <tr class="text-center">
+                <th class="table-dark" style="font-size: 15px; color: lightgrey;">Mobile Number</th>
+                <td class="fw-bold" style="background-color: lightgrey; color: black;">+91 9569811406</td>
+            </tr> 
+            <tr class="text-center">
+                <th class="table-dark" style="font-size: 15px; color: lightgrey;">Email</th>
+                <td class="fw-bold" style="background-color: lightgrey; color: black;">ashishshukla0866@gmail.com</td>
+            </tr>  
+        </table>
+       </div>
+     </div>
+    {% endblock %}
+</body>
+</html>

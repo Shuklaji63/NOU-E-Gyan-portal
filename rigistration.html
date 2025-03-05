@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+{% extends 'layout.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Registration{% endblock %}</title>
+</head>
+<body>
+    {% block main %}
+    <!-- This is main -->
+     <div class="row">
+        <div class="col-md-12" style="background-image: linear-gradient(rgba(0, 0, 0, 0.76),rgba(0, 0, 0, 0.568)) ,url(../static/img/pic5.jpg); height: 250px; background-repeat: no-repeat; background-size: cover;">
+            <h1 style="color: white; text-align: center; margin-top: 80px;">Registration Page</h1>
+            <h6 style="text-align: center; color: white;"><a href="" style="color: white; text-decoration-color: gold;">Registration</a> / <a href="" style="color: white; text-decoration-color: gold;">Home</a></h6>
+        </div>
+     </div>
+     <!-- Message starts -->
+     <div class="row" style="background-color: lightgrey;">
+        <div class="col-md-12">
+        {% for mess in messages %}
+        <div class="container">
+            <div class="row mt-3">
+                <div class="alert alert-success" role="alert">
+                    {{mess}}
+                  </div>
+            </div>
+        </div>
+        {% endfor %}
+        </div>
+     </div>
+     <!-- Message ends -->
+     <div class="row" style="background-color: lightgrey;">    
+        <form action="{% url 'save' %}" method="post">
+            {% csrf_token %}
+            <div class="row m-5 border p-3 shadow" style="background-color: white;">
+                <div class="col-md-6">
+                    <h6>Enter your Enrollment Number <span style="color: red;">*</span></h6>
+                    <input type="text" name="enrollment" class="form-control rounded-0 border-dark" placeholder="Enrollment Number" required>
+                </div>
+                <div class="col-md-6">
+                    <h6>Enter your Name <span style="color: red;">*</span></h6>
+                    <input type="text" name="name" class="form-control rounded-0 border-dark" placeholder="Name" required>
+                </div>
+                <div class="col-md-6 mt-4">
+                    <h6>Enter your Father's Name <span style="color: red;">*</span></h6>
+                    <input type="text" name="fname" class="form-control rounded-0 border-dark" placeholder="Father Name" required>
+                </div>
+                <div class="col-md-6 mt-4">
+                    <h6>Enter your Mother's Name <span style="color: red;">*</span></h6>
+                    <input type="text" name="mname" class="form-control rounded-0 border-dark" placeholder="Mother Name" required>
+                </div>
+                <div class="col-md-6 mt-5">
+                    <h6>Enter your Gender <span style="color: red;">*</span></h6>
+                    <input type="radio" name="gender" value="Male">&nbsp;Male
+                    <input type="radio" name="gender" value="Female">&nbsp;Female
+                    <input type="radio" name="gender" value="Others">&nbsp;Others
+                </div>
+                <div class="col-md-6 mt-4">
+                    <h6>Enter your Address <span style="color: red;">*</span></h6>
+                    <textarea type="text" name="address" class="form-control rounded-0 border-dark" placeholder="Address" required>
+                    </textarea>    
+                </div>
+                <div class="col-md-6 mt-4">
+                    <h6>Enter your Course <span style="color: red;">*</span></h6>
+                    <input type="text" name="course" class="form-control rounded-0 border-dark" placeholder="Course" required>
+                </div>
+                <div class="col-md-6 mt-4">
+                    <h6>Enter your Branch <span style="color: red;">*</span></h6>
+                    <input type="text" name="branch" class="form-control rounded-0 border-dark" placeholder="Branch" required>
+                </div>
+                <div class="col-md-6 mt-4">
+                    <h6>Enter your Year <span style="color: red;">*</span></h6>
+                    <input type="number" name="year" class="form-control rounded-0 border-dark" placeholder="Year" required>
+                </div>
+                <div class="col-md-6 mt-4">
+                    <h6>Enter your Contact Number <span style="color: red;">*</span></h6>
+                    <input type="number" name="mobile" class="form-control rounded-0 border-dark" placeholder="Contact Number" required>
+                </div>
+                <div class="col-md-6 mt-4">
+                    <h6>Enter your Email <span style="color: red;">*</span></h6>
+                    <input type="email" name="email" class="form-control rounded-0 border-dark" placeholder="Email" required>
+                </div>
+                <div class="col-md-6 mt-4">
+                    <h6>Enter your Password <span style="color: red;">*</span></h6>
+                    <input type="password" name="password" class="form-control rounded-0 border-dark" placeholder="Password" required>
+                </div>
+                <div class="col-md-12 mt-4">
+                    <input type="submit" class="btn w-100 shadow" style="font-size: 20px; background-color: darkred; color: white; border-radius:15px;">
+                </div>
+            </div>
+        </form>
+     </div>
+    <!-- This is main -->
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome To Admin Portal</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- google fonts -->
+    
+</head>
+<body style="font-family:Poppins, sans-serif;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row p-3" style="background: linear-gradient(to right ,darkred 20% , gold 80%);">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <div class="row bg-light" style="border-radius: 20px;">
+                            <div class="col-md-6 text-center">
+                                <img src="{% static 'img/logo1.png' %}" style="height: 125px;">
+                            </div>
+                            <div class="col-md-6">
+                                <h2 class="fw-bold mt-4" style="color: darkred; text-decoration-line: underline;">NOU e-GYAN PORTAL</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-12 text-end mt-5">
+                                <a href="{% url 'adminlogin' %}" style="text-decoration: none; color: darkred;border: 2px dashed;"><span class="fw-bold">Back To Admin Portal</span></a>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-4 mt-4" style="border-top:18px dotted darkred;"></div>
+                    <div class="col-md-4 fw-bold text-center" style="font-size: 40px;">USERS INFO TABLE</div>
+                    <div class="col-md-4 mt-4" style="border-top:18px dotted gold;"></div>
+                </div>
+                <!-- table starts -->
+                <div class="row p-4 mt-3" style="background-color: grey;">
+                    <div class="col-md-12">
+                        <table class="table table-bordered">
+                            <thead class="text-center">
+                                <tr>
+                                    <th style="background-color: darkgrey; color: white;">Enrollment</th>
+                                    <th style="background-color: darkgrey; color: white;">Name</th>
+                                    <th style="background-color: darkgrey; color: white;">Father's Name</th>
+                                    <th style="background-color: darkgrey; color: white;">Mother's Name</th>
+                                    <th style="background-color: darkgrey; color: white;">Gender</th>
+                                    <th style="background-color: darkgrey; color: white;">Address</th>
+                                    <th style="background-color: darkgrey; color: white;">Course</th>
+                                    <th style="background-color: darkgrey; color: white;">Branch</th>
+                                    <th style="background-color: darkgrey; color: white;">Year</th>
+                                    <th style="background-color: darkgrey; color: white;">Mobile</th>
+                                    <th style="background-color: darkgrey; color: white;">Email</th>
+                                    <th style="background-color: darkgrey; color: white;">Password</th>
+                                    <th colspan="2" style="background-color: darkgrey; color: white;">Modify</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                {% for i in Show %}
+                                <tr>
+                                    <td>{{i.enrollment}}</td>
+                                    <td>{{i.name}}</td>
+                                    <td>{{i.fname}}</td>
+                                    <td>{{i.mname}}</td>
+                                    <td>{{i.gender}}</td>
+                                    <td>{{i.address}}</td>
+                                    <td>{{i.course}}</td>
+                                    <td>{{i.branch}}</td>
+                                    <td>{{i.year}}</td>
+                                    <td>{{i.mobile}}</td>
+                                    <td>{{i.email}}</td>
+                                    <td>{{i.password}}</td>
+                                    <td>
+                                        <a href="{% url 'delete' i.id %}"><i class="fa-solid fa-trash" style="color: #e40c22;"></i></a>
+                                    </td>
+                                    <td>
+                                        <a href=""><i class="fa-solid fa-pen-to-square" style="color: #74C0FC;"></i></a>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                 </div>
+                <!-- table ends -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

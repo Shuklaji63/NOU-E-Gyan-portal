@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% extends 'studentlayout.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block student %}
+    <div class="row m-4" style="border-radius: 20px; background-image:linear-gradient(rgba(0, 0, 0, 0.478),rgba(0, 0, 0, 0.73)) ,url(../static/img/pic5.jpg); height:100%; background-repeat: no-repeat; background-size: cover;">
+        <div class="col-md-12">
+    <h1 class="text-center fw-bold mt-5" style="color: lightgrey;">Submit Your Feedback</h1>
+    
+    <form action="{% url 'feedsave' %}" method="post">
+        {% csrf_token %}
+        {% for i in messages %}
+        <div class="alert alert-success" role="alert">
+            {{i}}
+          </div>
+        {% endfor %}
+        <div class="row border p-4 mt-5" style="background-color: white; margin-left: 50px; margin-right: 50px; border-radius: 20px;">
+           <div class="col-md-12 text-center mx-auto">
+            <h3 style="color: darkgray;">Subject:</h3>
+            <input type="text" name="Subject" class="form-control" placeholder="Enter Subject">
+           </div>
+           <div class="col-md-12 mt-3 text-center">
+            <h3 style="color: darkgray;">Enter Your Feedback Here:</h3>
+            <textarea style="height: 100px; width:100%; border-radius: 15px;" class="border" name="feed" placeholder="Write Your Feedback Here"></textarea>
+           </div>
+           <div class="col-md-12 mt-3">
+            <input type="submit"/>
+           </div>
+        </div>
+    </form>
+    </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

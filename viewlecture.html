@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends 'studentlayout.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block student %}
+    <div class="row m-4">
+        <div class="col-md-12">
+            <table class="table table-bordered">
+                <tr class="text-center" style="background-color: darkgray;">
+                    <th>Serial Number</th>
+                    <th>Course</th>
+                    <th>Branch</th>
+                    <th>Year</th>
+                    <th>Subject</th>
+                    
+                    <th>Lecture Link</th>
+                </tr>
+                {% for i in lect %}
+                <tr class="text-center">
+                    <td>{{i.id}}</td>
+                    <td>{{i.program}}</td>
+                    <td>{{i.Branch}}</td>
+                    <td>{{i.Year}}</td>
+                    <td>{{i.subject}}</td>
+                   
+                    <td><a href="{{i.link}}" target="_blank">View Lecture</a></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

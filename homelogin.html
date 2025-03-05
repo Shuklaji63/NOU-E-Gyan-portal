@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% extends 'layout.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Login{% endblock %}</title>
+</head>
+<body>
+    {% block main %}
+    <!-- header -->
+    <div class="row">
+        <div class="col-md-12" style="background-image: linear-gradient(rgba(0, 0, 0, 0.76),rgba(0, 0, 0, 0.568)) ,url(../static/img/pic5.jpg); height: 250px; background-repeat: no-repeat; background-size: cover;">
+            <h1 style="color: white; text-align: center; margin-top: 80px;">Login Page</h1>
+            <h6 style="text-align: center; color: white;"><a href="" style="color: white; text-decoration-color: gold;">Login</a> / <a href="" style="color: white; text-decoration-color: gold;">Home</a></h6>
+        </div>
+     </div>
+    <!-- header -->
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 border m-5 p-3 shadow-lg">
+            <form action="{% url 'logcode' %}" method="post">
+                {% csrf_token %}
+                <div class="text-center mb-4">
+                    <img src="{% static 'img/logo1.png' %}" height="100px"> 
+                </div>
+                <!-- Email input -->
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="email" name="userid" class="form-control rounded-0" />
+                  <label class="form-label" for="form2Example1">Email address</label>
+                </div>
+              
+                <!-- Password input -->
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input type="password" name="password" class="form-control rounded-0" />
+                  <label class="form-label" for="form2Example2">Password</label>
+                </div>
+                <!-- user type -->
+                <div data-mdb-input-init class="form-outline mb-4">
+                    <select name="usertype" class="dropdown form-control rounded-0 ">
+                        <option value="">--Select Your User Type--</option>
+                        <option value="student">Student</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                    <label class="form-label" for="form2Example2">User Type</label>
+                </div>
+              
+                <!-- 2 column grid layout for inline styling -->
+                <div class="row mb-4">
+                  <div class="col d-flex justify-content-center">
+                    <!-- Checkbox -->
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+                      <label class="form-check-label" for="form2Example31"> Remember me </label>
+                    </div>
+                  </div>
+              
+                  <div class="col">
+                    <!-- Simple link -->
+                    <a href="#!">Forgot password?</a>
+                  </div>
+                </div>
+              
+                <!-- Submit button -->
+                <input type="submit" class="btn btn-primary btn-block mb-4 w-100">
+              
+                <!-- Register buttons -->
+                <div class="text-center">
+                  <p>Not a member? <a href="#!">Register</a></p>
+                </div>
+              </form>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+{% extends 'layout.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Home {% endblock %}</title>
+</head>
+<body>
+    {% block main %}
+    <!-- slider starts -->
+    <div class="row">
+        <div class="col-md-12 p-0">
+            <img src="{% static 'img/pic4.jpg' %}" class="w-100" style="height: 400px;">
+        </div>
+    </div>
+    <!-- slider ends -->
+    <!-- marquee starts -->
+    <div class="row bg-warning mt-2 p-3">
+        <div class="col-md-3 mx-2" style="background-color: saddlebrown; color: white; text-align: center;">
+            <p class="mt-2">The portal is easy to access & highly user
+                friendly for the students & study centres.</p>
+        </div>
+        <div class="col-md-3 mx-2" style="background-color: saddlebrown; color: white;">
+            <p class="mt-2">The portal is fully secured and accessible
+                24 x 7 to its authorised users.</p>
+        </div>
+        <div class="col-md-3 mx-2" style="background-color: saddlebrown; color: white;">
+            <p class="mt-2">The portal is easy to access & highly user
+                friendly for the students & study centres.</p>
+        </div>
+    </div>
+    <!-- marquee ends -->
+    <!-- Description starts -->
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-1 mt-4 fw-bold"><span style="color: grey; font-size: 20px;">DESCRIPTION</span></div>
+        <div class="col-md-10 fw-bold"><hr style="margin-left:10px; margin-top:38px; margin-right: 1000px; color:orangered;"></div>
+    </div> 
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-11"><span class="fw-bold" style="color: black; font-size: 25px;">ABOUT</span>&nbsp<span class="fw-bold" style="color: darkred; font-size: 25px">NOU e-GYAN PORTAL</span></div>
+    </div>
+    <div class="row mt-3">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md-1"></div>
+                <div class="col-md-6">
+                    <p><b>Nalanda Open University</b> welcomes all our students, faculties & study centres to the very new & innovative online study portal <b>NOU e-Gyan</b>. The portal is a unique initiative by Hon'ble Vice-Chancellor <b>Prof. (Dr.) K C Sinha</b>, which aims at providing online study material to the students of NOU.</p>
+                    <p>The portal is accessible from any hook and corner of the world if the system allows the permission to its users. It is also fully secured and accessible 24 x 7 to its authorised users. It will resolve the academic issues such as E-content Distribution, Delivery, Tracking, Assessment, Progress Monitoring & Controlling of all stakeholders of the system i.e. students, teachers, study centre administrators as well as Nalanda Open University Admins when they are at a distance.
+  
+                    </p>
+                </div> 
+                <div class="col-md-5"><iframe width="560" height="315" src="https://www.youtube.com/embed/jVl8uLz8f9w?si=viYqq7Z_SIkc-76m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+            </div>
+        </div>
+    </div>
+    <!-- description ends -->
+    <!-- Portal starts -->
+    <div class="row" style="background-image: url(static/img/pic5.jpg); background-repeat: no-repeat; background-size: cover;"> 
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-1 mt-4 fw-bold"><span style="color: rgb(4, 4, 4); font-size: 20px;">PORTAL</span></div>
+                <div class="col-md-10 fw-bold"><hr style="margin-top:38px; margin-right: 1000px; color:darkred;"></div>
+            </div> 
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-11"><span class="fw-bold" style="color: black; font-size: 25px;">USERS</span>&nbsp<span class="fw-bold" style="color: darkred; font-size: 25px">OF THE PORTAL</span></div>
+            </div>     
+        </div>
+        <div class="row mb-5">
+            <div class="col-md-12">
+                <div class="container">
+                    <div class="row mt-5" style="margin: 0px auto;">
+                        <div class="col-md-4">
+                            <div class="card_outer">
+                                <div class="card_box">
+                                    <div class="card_content">
+                                        <span style="background-color: darkred; border: 0px solid; border-radius:100%; padding: 20px;"><i class="fa-solid fa-lock mb-4" style="color: #ffffff; font-size: 25px;"></i></span>
+                                        <p class="mt-5" style="text-align:center; margin: 20px;">The university admin can login to monitor the portal, provide access to authorised stake holders & upload study material.</p><br>
+                                        <button class="fw-bold" style="background-color: rgb(242, 179, 18); color: darkred; border: 0px solid; border-radius: 15px;">University Admin</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card_outer">
+                                <div class="card_box">
+                                    <div class="card_content">
+                                        <span style="background-color: darkred; border: 0px solid; border-radius:100%; padding: 20px;"><i class="fa-solid fa-book" style="color: #ffffff; font-size: 25px;"></i></span>
+                                        <p class="mt-5" style="text-align:center; margin: 20px;">The study centres authorised personnel can login to track students progress, enroll students, schedule assignments & generate reports.</p><br>
+                                        <button class="fw-bold" style="background-color: rgb(242, 179, 18); color: darkred; border: 0px solid; border-radius: 15px;">Study Center</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card_outer">
+                                <div class="card_box">
+                                    <div class="card_content">
+                                        <span style="background-color: darkred; border: 0px solid; border-radius:100%; padding: 20px;"><i class="fa-solid fa-user-group" style="color: #ffffff; font-size: 25px;"></i></span>
+                                        <p class="mt-5" style="text-align:center; margin: 20px;">The university enrolled students can login to view the notification by university, access the e-contents, give assignments & track thier progress report.</p><br>
+                                        <button class="fw-bold" style="background-color: rgb(242, 179, 18); color: darkred; border: 0px solid; border-radius: 15px;">NOU Students</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portal ends -->
+    <!--Features starts  -->
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-1 mt-4 fw-bold"><span style="color: grey; font-size: 20px;">FEATURES</span></div>
+        <div class="col-md-10 fw-bold"><hr style="margin-top:38px; margin-right: 1000px; color:orangered;"></div>
+    </div> 
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-11"><span class="fw-bold" style="color: black; font-size: 25px;">STUDENT</span>&nbsp<span class="fw-bold" style="color: darkred; font-size: 25px">SERVICES</span></div>
+    </div>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <div class="container">
+                <div class="row">
+                    <div class="row" style="margin: 0px auto;">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img src="{% static 'img/card1.jpg' %}">
+                                <div class="fw-bold" style="background-color: darkred; color: white; border: 1px solid darkred; text-align: center;">Login</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img src="{% static 'img/card2.jpg' %}">
+                                <div class="fw-bold" style="background-color: darkred; color: white; border: 1px solid darkred; text-align: center;">Dashboard</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img src="{% static 'img/card3.jpg' %}">
+                                <div class="fw-bold" style="background-color: darkred; color: white; border: 1px solid darkred; text-align: center;">Self Learning</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img src="{% static 'img/card4.jpg' %}">
+                                <div class="fw-bold" style="background-color: darkred; color: white; border: 1px solid darkred; text-align: center;">eBooks</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <div class="row mt-2 mb-5">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <div class="container">
+                <div class="row">
+                    <div class="row" style="margin: 0px auto;">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img src="{% static 'img/card3.jpg' %}">
+                                <div class="fw-bold" style="background-color: darkred; color: white; border: 1px solid darkred; text-align: center;">Self Assessment Tools</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img src="{% static 'img/card6.jpg' %}">
+                                <div class="fw-bold" style="background-color: darkred; color: white; border: 1px solid darkred; text-align: center;">Performance</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img src="{% static 'img/card7.jpg' %}">
+                                <div class="fw-bold" style="background-color: darkred; color: white; border: 1px solid darkred; text-align: center;">Feedback</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img src="{% static 'img/card8.jpg' %}">
+                                <div class="fw-bold" style="background-color: darkred; color: white; border: 1px solid darkred; text-align: center;">Course Catalog</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <!-- Features ends -->
+    <!-- Mentors starts -->
+    <div class="row" style="background-color: grey;">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-1 mt-4 fw-bold"><span style="color: white; font-size: 13px;">OUR MENTORS</span></div>
+                <div class="col-md-10 fw-bold"><hr style="margin-top:38px; margin-right: 1000px; color:orangered;"></div>
+            </div> 
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-11"><span class="fw-bold" style="color: black; font-size: 25px;">ADMINISTRATIVE</span>&nbsp<span class="fw-bold" style="color: darkred; font-size: 25px">SETUP</span></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row mb-5 mt-3">
+                <div class="col-md-2"></div>
+                <div class="col-md-2">
+                    <div class="card align-items-center">
+                        <img src="{% static 'img/member1.jpg' %}" class="w-75" style="padding: 15px; border-radius: 100%;">
+                        <h6 class="fw-bold" style="color: darkred;">Prof. (Dr.) K. C. Sinha</h6>
+                        <p>VICE CHANCELLOR</p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card align-items-center">
+                        <img src="{% static 'img/member2.jpg' %}" class="w-75" style="padding: 15px; border-radius: 100%;">
+                        <h6 class="fw-bold" style="color: darkred;">Prof. (Dr.) Sanjoy Kumar</h6>
+                        <p>PRO VICE CHANCELLOR</p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card align-items-center">
+                        <img src="{% static 'img/member3.jpeg' %}" class="w-75" style="padding: 15px; border-radius: 100%;">
+                        <h6 class="fw-bold" style="color: darkred;">Dr. Md. Habibur Rahman</h6>
+                        <p>REGISTRAR</p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card align-items-center">
+                        <img src="{% static 'img/member4.jpg' %}" class="w-75" style="padding: 15px; border-radius: 100%;">
+                        <h6 class="fw-bold" style="color: darkred;">Dr. Neelam Kumari</h6>
+                        <p>REGISTRAR (EXAM)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Mentors ends -->
+    <!-- Course starts -->
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-1 mt-4 fw-bold"><span style="color: grey; font-size: 20px;">COURSES</span></div>
+        <div class="col-md-10 fw-bold"><hr style="margin-top:38px; margin-right: 1000px; color:orangered;"></div>
+    </div> 
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-11"><span class="fw-bold" style="color: black; font-size: 25px;">OUR</span>&nbsp<span class="fw-bold" style="color: darkred; font-size: 25px">COURSES</span></div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-end">
+                <button class="fw-bold" style="background-color: orangered; border: 0px; color: white; height: 40px; width:175px;">View All Courses</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mt-5 mb-5">
+            <div class="col-md-4">
+                <div class="card align-items-center" style="box-shadow: 5px 5px 10px black;">
+                    <img src="{% static 'img/course1.png' %}" class="w-75 mt-3">
+                    <h6 class="fw-bold mt-2">MASTER IN COMPUTER APPLICATION</h6>
+                    <h6 class="fw-bold">(M.C.A)</h6>
+                    <i class="fa-solid fa-star mt-3 mb-3" style="color: #FFD43B;"><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i></i>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card align-items-center" style="box-shadow: 5px 5px 10px black;">
+                    <img src="{% static 'img/course2.png' %}" class="w-75 mt-3">
+                    <h6 class="fw-bold mt-2">PG DIPLOMA IN FINANCIAL MANAGEMENT</h6>
+                    <h6 class="fw-bold">(P.G.D.F.M)</h6>
+                    <i class="fa-solid fa-star mt-3 mb-3" style="color: #FFD43B;"><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i></i>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card align-items-center" style="box-shadow: 5px 5px 10px black;">
+                    <img src="{% static 'img/course3.png' %}" class="w-75 mt-3">
+                    <h6 class="fw-bold mt-2">BACHLORE IN BUSINESS ADMINISTRATION</h6>
+                    <h6 class="fw-bold">(B.B.A)</h6>
+                    <i class="fa-solid fa-star mt-3 mb-3" style="color: #FFD43B;"><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i><i class="fa-solid fa-star" style="color: #FFD43B;"></i></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Course ends -->
+    <!-- How to use starts -->
+    <div class="row" style="background-color: grey;">
+        <div class="col-md-12">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-1 mt-4 fw-bold"><span style="color: lightgray; font-size: 13px;">HOW TO USE</span></div>
+                    <div class="col-md-10 fw-bold"><hr style="margin-top:38px; margin-right: 1000px; color:orangered;"></div>
+                </div> 
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-11">
+                        <span class="fw-bold" style="color: white; font-size: 25px;">NOU e-GYAN PORTAL TUTORIAL VIDEOS</span>
+                        <p class="fw-bold" style="color: white;">For any queries regarding the access into the Portal, the users can watch the tutorial videos provided or feel free to communicate their issues via the given contact helpline number or helpline email ID.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5">
+                        <div class="box" style="border: 3px solid orangered; padding: 5px;">
+                            <iframe width="510" height="315" src="https://www.youtube.com/embed/Sh9VxOBoYbk?si=Ps7RqxdgCs2shn31" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="box" style="border: 3px solid orangered; padding: 5px;">
+                            <iframe width="510" height="315" src="https://www.youtube.com/embed/Sh9VxOBoYbk?si=Ps7RqxdgCs2shn31" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-1 mb-5">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 text-center">
+                        <div class="box" style="background:linear-gradient(darkred 20% , orangered 80%); color: white; height: 40px;">
+                            <h6 class="fw-bold">HOW TO LOGIN AT NOU e-GYAN PORTAL</h6>
+                        </div>
+                    </div>
+                    <div class="col-md-5 text-center">
+                        <div class="box" style="background:linear-gradient(darkred 20% , orangered 80%); color: white; height: 40px;">
+                            <h6 class="fw-bold">HOW TO ACCESS CONTENT AT NOU e-GYAN PORTAL</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- How to use ends -->
+    <!-- Helpdesk starts -->
+     <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-1 mt-4 fw-bold"><span style="color: grey; font-size: 20px;">Help Desk</span></div>
+        <div class="col-md-10 fw-bold"><hr style="margin-top:38px; margin-right: 1000px; color:orangered;"></div>
+    </div> 
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-11"><span class="fw-bold" style="color: black; font-size: 25px;">ALWAYS</span>&nbsp<span class="fw-bold" style="color: darkred; font-size: 25px">HERE TO SUPPORT YOU</span></div>
+    </div>
+    <div class="row">
+        <div class="col-md-5">
+            <img src="{% static 'img/help.svg' %}" alt="">
+        </div>
+        <div class="col-md-5 mx-5">
+            <div class="box" style="background-color: darkorange; color: white; text-align: justify; font-size: 15px;"><p class="p-3">The help desk provides user assistance to navigate and understand the aspect of the portal. This also provides a simple interface for maintainance of the student information and issue faced.</p></div>
+            <div class="box mt-3" style="border: 1px solid;"><i class="fa-solid fa-phone p-4" style="color: #fbb400; font-size: 30px;"></i>+91 7080102007</div>
+            <div class="box mt-3" style="border: 1px solid;"><i class="fa-solid fa-envelope p-4" style="color: #fbb400; font-size: 30px;"></i>nouegyanhelp@gmail.com</div>
+        </div>
+        
+    </div>
+    <!-- Helpdesk ends -->
+    <!-- Links start -->
+    <div class="row" style="background-color: grey;">
+        <div class="col-md-12">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-1 mt-4 fw-bold"><span style="color: lightgray; font-size: 17px;">Help Desk</span></div>
+                    <div class="col-md-10 fw-bold"><hr style="margin-top:38px; margin-right: 1000px; color:orangered;"></div>
+                </div> 
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-11"><span class="fw-bold" style="color: black; font-size: 25px;">QUICK</span>&nbsp<span class="fw-bold" style="color: darkred; font-size: 25px">LINKS</span></div>
+                </div>
+                <div class="row mt-3 mb-5">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img src="{% static 'img/link1.png' %}" class="w-100" style="border-radius: 25px;">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h3 class="mx-5 fw-bold" style="color: darkred;">STD</h3>
+                                        <p>Science & Technology Department</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img src="{% static 'img/link2.png' %}" class="w-100" style="border-radius: 25px;">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h3 class="mx-5 fw-bold" style="color: darkred;">UGC</h3>
+                                        <p>University Grants Commission</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img src="{% static 'img/logo1.png' %}" class="w-100" style="border-radius: 25px;">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h3 class="mx-5 fw-bold" style="color: darkred;">NOU</h3>
+                                        <p>Nalanda Open University</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <!-- Links ends -->
+    <!-- Feedback starts -->
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-1 mt-4 fw-bold"><span style="color: grey; font-size: 20px;">FEEDBACK</span></div>
+        <div class="col-md-10 fw-bold"><hr style="margin-top:38px; margin-right: 1000px; color:orangered;"></div>
+    </div> 
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-11"><span class="fw-bold" style="color: black; font-size: 25px;">FEEDBACK</span>&nbsp<span class="fw-bold" style="color: darkred; font-size: 25px">FROM OUR STUDENTS</span></div>
+    </div>
+    <div class="row mb-5">
+        <div class="col-md-12">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 text-end">
+                        <img src="{% static 'img/student1.jpg' %}" class="w-50">
+                    </div>
+                    <div class="col-md-9">
+                        <p class="fw-bold mt-4">“This is best and biggest unified platform for instant online learning. We can easily access any content of our enrolled course from the portal. Thank you NOU e-Gyan!!“</p>
+                        <p>-Ashish shukla-</p>
+                        <p>University Student</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feedback ends -->
+   
+    {% endblock %}
+</body>
+</html>

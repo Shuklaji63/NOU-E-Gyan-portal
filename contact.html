@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+{% extends 'layout.html' %} {% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Contact{% endblock %}</title>
+  </head>
+  <body>
+    {% block main %}
+    <div class="row">
+      <div
+        class="col-md-12"
+        style="
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.76),
+              rgba(0, 0, 0, 0.568)
+            ),
+            url(../static/img/pic2.jpeg);
+          height: 250px;
+          background-repeat: no-repeat;
+          background-size: cover;
+        "
+      >
+        <h1
+          style="
+            color: white;
+            text-align: center;
+            margin-top: 70px;
+            font-size: 90px;
+          "
+        >
+          Contact Us
+        </h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-1 mt-4 fw-bold">
+        <span style="color: grey; font-size: 20px">Help Desk</span>
+      </div>
+      <div class="col-md-10 fw-bold">
+        <hr style="margin-top: 38px; margin-right: 1000px; color: orangered" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-11">
+        <span class="fw-bold" style="color: black; font-size: 25px">ALWAYS</span
+        >&nbsp<span class="fw-bold" style="color: darkred; font-size: 25px"
+          >HERE TO SUPPORT YOU</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-5">
+        <img src="{% static 'img/help.svg' %}" alt="" />
+      </div>
+      <div class="col-md-5 mx-5 p-5">
+        <div
+          class="box"
+          style="
+            background-color: darkorange;
+            color: white;
+            text-align: justify;
+            font-size: 15px;
+          "
+        >
+          <p class="p-3">
+            The help desk provides user assistance to navigate and understand
+            the aspect of the portal. This also provides a simple interface for
+            maintainance of the student information and issue faced.
+          </p>
+        </div>
+        <div class="box mt-3" style="border: 1px solid">
+          <i
+            class="fa-solid fa-phone p-4"
+            style="color: #fbb400; font-size: 30px"
+          ></i
+          >+91 7080102007
+        </div>
+        <div class="box mt-3" style="border: 1px solid">
+          <i
+            class="fa-solid fa-envelope p-4"
+            style="color: #fbb400; font-size: 30px"
+          ></i
+          >nouegyanhelp@gmail.com
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="row p-3">
+          <div class="col-md-12">
+            <div
+              class="card align-items-center"
+              style="box-shadow: 8px 8px 15px darkgrey"
+            >
+              <span
+                style="
+                  border: 1px dashed darkred;
+                  border-radius: 100%;
+                  padding: 15px;
+                  margin-top: 10px;
+                  margin-bottom: 10px;
+                "
+                ><i
+                  class="fa-solid fa-location-dot px-2"
+                  style="color: darkred; font-size: 40px"
+                ></i
+              ></span>
+              <h3 class="fw-bold">OUR ADDRESS</h3>
+              <h6>A 108 Adam Street, New York, NY 535003</h6>
+            </div>
+          </div>
+        </div>
+        <div class="row p-3">
+          <div class="col-md-6">
+            <div
+              class="card align-items-center"
+              style="box-shadow: 8px 8px 15px darkgrey"
+            >
+              <span
+                style="
+                  border: 1px dashed darkred;
+                  border-radius: 100%;
+                  padding: 15px;
+                  margin-top: 10px;
+                  margin-bottom: 10px;
+                "
+                ><i
+                  class="fa-solid fa-envelope px-1"
+                  style="color: darkred; font-size: 40px"
+                ></i
+              ></span>
+              <h3 class="fw-bold">EMAIL US</h3>
+              <h6>nouegyanhelp@gmail.com</h6>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div
+              class="card align-items-center"
+              style="box-shadow: 8px 8px 15px darkgrey"
+            >
+              <span
+                style="
+                  border: 1px dashed darkred;
+                  border-radius: 100%;
+                  padding: 15px;
+                  margin-top: 10px;
+                  margin-bottom: 10px;
+                "
+                ><i
+                  class="fa-solid fa-phone px-1"
+                  style="color: darkred; font-size: 40px"
+                ></i
+              ></span>
+              <h3 class="fw-bold">CALL US</h3>
+              <h6>+91-000-000-0000</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row p-3">
+          <div class="col-md-12">
+            <div class="card" style="box-shadow: 8px 8px 15px darkgrey">
+              <form action="{% url 'enqsave' %}" method="post">
+                {% csrf_token %}
+                <div class="row p-2">
+                  <div class="col-md-6 mt-2">
+                    <input
+                      type="text"
+                      name="name"
+                      class="form-control border-danger"
+                      placeholder="Enter Your Name"
+                    />
+                  </div>
+                  <div class="col-md-6 mt-2">
+                    <input
+                      type="text"
+                      name="contactno"
+                      class="form-control border-danger"
+                      placeholder="Enter Your Mobile"
+                    />
+                  </div>
+                  <div class="col-md-12 mt-3">
+                    <input
+                      type="text"
+                      name="email"
+                      class="form-control border-danger"
+                      placeholder="Enter Your Email Address"
+                    />
+                  </div>
+                  <div class="col-md-12 mt-4">
+                    <textarea
+                      name="enq"
+                      class="form-control border-danger"
+                      placeholder="Enter The Enquiery"
+                      style="height: 165px"
+                    ></textarea>
+                  </div>
+                  <div class="col-md-12 mt-3">
+                    <input
+                      type="submit"
+                      class="w-100"
+                      style="
+                        background-color: darkred;
+                        color: white;
+                        font-size: 20px;
+                        border: 0px;
+                        border-radius: 10px;
+                      "
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Helpdesk starts -->
+
+    <hr />
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-11 mt-4">
+        <span
+          class="fw-bold"
+          style="color: black; font-size: 25px; text-decoration: underline"
+          >OUR</span
+        >&nbsp<span
+          class="fw-bold"
+          style="color: darkred; font-size: 25px; text-decoration: underline"
+          >LOCATION</span
+        >
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 p-0">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.6312457598206!2d85.13876997517805!3d25.61716697744299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed585a72898067%3A0x332ef319c1947f5e!2sNalanda%20Open%20University%20Patna!5e0!3m2!1sen!2sin!4v1724422641681!5m2!1sen!2sin"
+          width="1515"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+    <!-- Helpdesk ends -->
+    {% endblock %}
+  </body>
+</html>

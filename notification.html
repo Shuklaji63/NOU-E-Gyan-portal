@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% extends 'adminlogin.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block mainadmin %}
+    <h1 class="text-center fw-bold mt-5" style="color: grey;">Submit Your Feedback</h1>
+    <form action="{% url 'notisave' %}" method="post">
+        {% csrf_token %}
+        <div class="row border p-4 mt-5" style="background-color: white; margin-left: 50px; margin-right: 50px; border-radius: 20px;">
+           <div class="col-md-12 text-start">
+            <h4 style="color: darkgray;">Add Notification:</h4>
+            <input type="text" name="notim" class="form-control border-dark" placeholder="Enter Text" style="height: 50px;">
+           </div>
+           
+           <div class="col-md-12 mt-3">
+            <button class="btn btn-danger w-100 ">Add Notification</button>
+           </div>
+        </div>
+    </form>
+    {% endblock %}
+</body>
+</html>

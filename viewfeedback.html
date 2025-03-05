@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% extends 'adminlogin.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block mainadmin %}
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <tr class="table-dark">
+                    <th>Serial Number</th>
+                    <th>Name</th>
+                    <th>Course</th>
+                    <th>Branch</th>
+                    <th>Contact Number</th>
+                    <th>Email</th>
+                    <th>Subject</th>
+                    <th>Feedback</th>
+                    <th>Feedback</th>
+                    <th>Feedback</th>
+                </tr>
+                {% for i in  F %}
+                <tr>
+                    <td>{{i.id}}</td>
+                    <td>{{i.name}}</td>
+                    <td>{{i.program}}</td>
+                    <td>{{i.branch}}</td>
+                    <td>{{i.contactno}}</td>
+                    <td>{{i.email}}</td>
+                    <td>{{i.Subject}}</td>
+                    <td>{{i.feed}}</td>
+                    <td>{{i.status}}</td>
+                    <td>{{i.reqdate}}</td>
+                </tr>
+                    {% endfor %}
+                </table>
+        </div>
+    </div>   
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends 'adminlogin.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block mainadmin %}
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <tr class="table-dark">
+                    <th>Serial Number</th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Address</th>
+                    <th>Contact Number</th>
+                    <th>Email</th>
+                    <th>Enquiry</th>
+                </tr>
+            </table>
+        </div>
+    </div>   
+    {% endblock %}
+</body>
+</html>
